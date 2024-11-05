@@ -9,7 +9,8 @@ A basic web application to interact with an Ethereum blockchain.
 
 ---
 
-## Once you have the prerequisites installed, you can run the following commands to install the project dependencies:
+## Installation
+Once you have the prerequisites installed, you can run the following commands to install the project dependencies:
 
 ```bash
 yarn install
