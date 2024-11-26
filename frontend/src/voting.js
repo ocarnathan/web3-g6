@@ -353,7 +353,7 @@ async function castVote() {
     }
 }
 // Attach event listener to the vote button
-document.getElementById('voteButton').addEventListener('click', castVote);
+// document.getElementById('voteButton').addEventListener('click', castVote);
 
 async function registerVoter() {
     const voterAddress = document.getElementById('voterAddress').value;
@@ -407,32 +407,37 @@ async function getRegisteredVoters() {
 }
 
 // Attach event listener to the vote button
-document.getElementById('registerButton').addEventListener('click', registerVoter);
-document.getElementById('voteButton').addEventListener('click', castVote);
-document.getElementById('candidates').addEventListener('change', async () => {
-    await getVotes(); // Call getVotes after the candidate is selected
-});
-window.addEventListener('load', () => {
-    loadCandidates();
-    getVotes();
-    // castVote();
-    // registerVoter();
-    getRegisteredVoters();
-});
+
+// document.getElementById('registerButton').addEventListener('click', registerVoter);
+// document.getElementById('voteButton').addEventListener('click', castVote);
+// document.getElementById('candidates').addEventListener('change', async () => {
+//     await getVotes(); // Call getVotes after the candidate is selected
+// });
+// window.addEventListener('load', () => {
+//     loadCandidates();
+//     getVotes();
+//     // castVote();
+//     // registerVoter();
+//     getRegisteredVoters();
+// });
+
 // window.addEventListener('load', registerVoter);
 
 
 
 // Determine the page type
-// if (document.location.pathname.includes("vote.html")) {
-//     loadCandidates();
-//     document.getElementById('voteButton').addEventListener('click', castVote);
-//     document.getElementById('getVotesButton').addEventListener('click', getVotes);
-// } else if (document.location.pathname.includes("register.html")) {
-//     document.getElementById('registerButton').addEventListener('click', registerVoter);
-// } else {
-//     loadCandidates();
-// }
+if (document.location.pathname.includes("vote.html")) {
+    loadCandidates();
+    document.getElementById('voteButton').addEventListener('click', castVote);
+    // document.getElementById('getVotesButton').addEventListener('click', getVotes);
+} else if (document.location.pathname.includes("register.html")) {
+    document.getElementById('registerButton').addEventListener('click', registerVoter);
+} else if (document.location.pathname.includes('dashboard.html')) {
+	getRegisteredVoters();
+} else {
+    loadCandidates();
+	document.getElementById('candidates').addEventListener('change', getVotes);
+}
 
 
 
