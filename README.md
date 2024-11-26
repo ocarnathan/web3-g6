@@ -9,9 +9,8 @@ A basic web application to interact with an Ethereum blockchain.
 
 ---
 
-## Installation
-Once you have the prerequisites installed, you can run the following commands to install the project dependencies:
-
-```bash
-yarn install
-```
+## Installation/Run Instructions
+navigate to frontend/src folder in terminal
+Run:
+npm install -g lite-server
+Run: lite-server
