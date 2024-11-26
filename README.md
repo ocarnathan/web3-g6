@@ -13,4 +13,5 @@ A basic web application to interact with an Ethereum blockchain.
 navigate to frontend/src folder in terminal
 Run:
 npm install -g lite-server
-Run: lite-server
+Run: 
+lite-server
