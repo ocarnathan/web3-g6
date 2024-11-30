@@ -356,7 +356,7 @@ async function castVote() {
             }
         );
         document.getElementById('status').innerText = 'Vote submitted!';
-        // await tx.wait(); // Wait for the transaction to be mined
+        // await tx.wait(); // Wait for the transaction to be mined.
     } catch (error) {
         console.error("Error submitting vote: ", error);
         document.getElementById('status').innerText = 'Error submitting vote!';
